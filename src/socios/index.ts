@@ -93,7 +93,7 @@ export class Socios {
       return [];
     }
   }
-  public async getNonFungilbleTokens(accessToken:string) {
+  public async getNonFungibleTokens(accessToken:string) {
     try {
       const response = await fetch('https://api-public.socios.com/nft/1.0.0/user/nfts', {
         method: 'GET',
