@@ -14,7 +14,7 @@ export class Socios {
         title: balanceObj.currencyNetwork.symbol,
         symbol: balanceObj.currencyNetwork.shortCode,
         decimals: balanceObj.currencyNetwork.precision,
-        image: undefined, // TODO fetch this data from secondary API (as per suggestion from Socios team)
+        image: undefined, // TODO implement this (solution in progress with Socios)
         balance: balanceObj.totalBalance,
         data: balanceObj
       }

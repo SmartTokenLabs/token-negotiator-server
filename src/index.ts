@@ -2,7 +2,9 @@ import { setAccessTokenCookie } from './utils/index.js'
 import { TokenNegotiatorSeverTokenConfigInterface } from './interface.js'
 export class Server {
   public socios: any;
-  public setAccessTokenCookie = setAccessTokenCookie;
+  public utils: any = {
+    setAccessTokenCookie
+  }
   constructor(private tokenConfig: TokenNegotiatorSeverTokenConfigInterface) { this.initSocios(); }
   async initSocios() {
     if (this.tokenConfig.issuers.socios) {

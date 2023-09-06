@@ -24,6 +24,35 @@ const negotiatorServer = new Server({
     }
   }
 });
+
+// example redirectURI configuration end point
+app.get("/user-login-callback", async (request, response) => { 
+
+    // retrieve access token
+    const accessTokenData = await tokenNegotiatorServer.socios.getAccessToken(request.query.code, response);
+
+    // set token
+    tokenNegotiatorServer.utils.setAccessTokenCookie(
+      response,
+      'socios',
+      accessTokenData
+    );
+
+    // navigate back to the application page including the wallet provider details.
+    response.redirect(`${process.env.SOCIOS_RETURN_TO_APP_URL}`);
+});
+
+// example user-balance configuration end point
+app.get("/user-balance", cors(), async (request, response) => {
+  const output = await tokenNegotiatorServer.socios.getFungibleTokenBalance(request.cookies['tn-oauth2-access-token-socios']);
+  response.json(output);
+});
+
+// example user-nfts configuration end point
+app.get("/user-nfts", cors(), async (request, response) =>{
+  const output = await tokenNegotiatorServer.socios.getNonFungibleTokens(request.cookies['tn-oauth2-access-token-socios']);
+  response.json(output);
+});
 ​
 // Client Side Configuration
 
@@ -67,8 +96,6 @@ const negotiatorClient = new Client({
     position: "top-right"
   }
 });
-
-// * Please note: userSignature is not yet available in this current version. 
 
 negotiatorClient.negotiate();
 
