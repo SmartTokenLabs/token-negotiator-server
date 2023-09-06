@@ -55,14 +55,6 @@ const negotiatorClient = new Client({
         userNfts: {
           path: 'http://localhost:5000/user-nfts', // end point to check the users NFT balance
           params: {}
-        },
-        userSignature: {
-          path: 'http://localhost:5000/user-signature', // end point create a signature
-          params: {}
-        },
-        userLogout: {
-          path: "http://localhost:5000/user-logout", // end point to logout a user (end their Oauth2 session)
-          params: {}
         }
       }
     }
