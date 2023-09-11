@@ -1,15 +1,23 @@
 {
-  "name": "token-negotiator-server",
+  "name": "@tokenscript/token-negotiator-server",
   "version": "1.0.0",
   "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
   "description": "A package for the server side implementation of token negotiator.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --outDir dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TokenScript/token-negotiator-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TokenScript/token-negotiator-server/issues"
+  },
   "author": "Smart Token Labs <sayhi@smarttokenlabs.com>",
-  "license": "MIT",
   "keywords": [
     "tokenScript",
     "token-negotiator"
