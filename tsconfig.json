@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
+    "removeComments": true,
     "target": "ES6",
     "module": "nodenext",
     "outDir": "./dist",
     "rootDir": "./src",
-    "strict": true
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "allowJs": true,
+    "resolveJsonModule": true
   }
 }
