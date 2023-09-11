@@ -1,0 +1,11 @@
+test
+src
+reports
+.eslintignore                                 
+.eslintrc                                     
+.github
+junit.xml                                     
+tsconfig.build.json                           
+tsconfig.json                                 
+tslint.json                                   
+sonar-project.properties
