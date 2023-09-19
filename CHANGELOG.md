@@ -4,7 +4,7 @@ Initial release of Token Negotiator Server
 
 ### Upgrade Steps
 
-- Install version 3.1.0 or greater of Token Negotiator.
+- Install version 0.2.1
 
 ### Breaking Changes
 
@@ -16,11 +16,14 @@ Initial release of Token Negotiator Server
 
 ### Bug Fixes
 
-[none]
+- Added logout functionality
 
-### Performance Improvements
+### Improvements
 
-[none]
+- Removed unused dependancies
+- Added Prettier / ESLint config and rules
+- Added License
+- Added detail to Package.json
 
 **Full Change log**:
 

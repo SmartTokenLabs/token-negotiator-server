@@ -1,6 +1,6 @@
 {
   "name": "@tokenscript/token-negotiator-server",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "type": "module",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,16 +22,20 @@
     "tokenScript",
     "token-negotiator"
   ],
+  "files": [
+    "dist/",
+    "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE"
+  ],
   "dependencies": {
-    "dotenv": "^16.3.1",
     "node-fetch": "^3.3.2",
-    "pako": "^2.1.0",
-    "stream": "^0.0.2",
-    "typescript": "^5.1.6",
-    "zlib": "^1.0.5"
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
     "@types/node": "^20.5.1",
-    "@types/pako": "^2.0.0"
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^3.0.0"
   }
 }

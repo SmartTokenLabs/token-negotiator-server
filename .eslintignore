@@ -1,0 +1,6 @@
+*.config.js
+dist
+node_modules
+token-negotiator*dist
+src/vendor
+scripts/

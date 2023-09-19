@@ -122,6 +122,32 @@ export class Socios {
     }
   }
 
+  public async userLogout(authKey:string, accessToken:string) {
+    try {
+      const response = await fetch('https://partner.socios.com/oauth2/revoke', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Authorization: `Basic ${authKey}`,
+        },
+        body: `accessToken=${encodeURIComponent(accessToken)}`
+      });
+
+      if (!response.ok) {
+        console.warn('Network response failed');
+        return { success: false };
+      }
+
+      return { success: true };
+
+    } catch (error) {
+
+      console.error('Failed to revoke access token from Socios API: ', error);
+      return { success: false };
+
+    }
+  }
+
   // public async getSignMessage(accessToken:string, message:string) {}
   // public async getVoucherCode(accessToken:string, voucherCode:string) {}
   
